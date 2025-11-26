@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <title>Contact – Quantora Analytics</title>
+  <meta name="description"
+    content="Contact Quantora Analytics to discuss your predictive analytics, machine learning, MLOps, data engineering, and dashboarding initiatives." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="nav-logo-mark">Q</span>
+        <span class="nav-logo-text">Quantora<span class="nav-logo-faded"> Analytics</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../services/index.html" class="nav-link">Services</a></li>
+          <li><a href="../case-studies/index.html" class="nav-link">Case Studies</a></li>
+          <li><a href="../about/index.html" class="nav-link">About</a></li>
+          <li><a href="../consultancy/index.html" class="nav-link">Consultancy</a></li>
+          <li><a href="../internship/index.html" class="nav-link">Internship</a></li>
+          <li><a href="index.html" class="nav-link nav-link-active">Contact</a></li>
+        </ul>
+        <a href="index.html" class="btn btn-sm btn-primary nav-cta">Book a strategy call</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section page-hero" data-animate>
+      <div class="container narrow">
+        <p class="kicker">Contact</p>
+        <h1>Let’s talk about your next data science win.</h1>
+        <p class="section-intro">
+          Tell us a bit about your team, your stack, and what you’d like to achieve. We’ll respond within
+          one business day with next steps and a proposed time for a call.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" data-animate>
+      <div class="container contact-grid">
+        <div class="card">
+          <h2>Project inquiry</h2>
+          <p>
+            Share as much context as you can—we’ll keep it confidential and use it only to assess fit and
+            prepare for our first conversation.
+          </p>
+          <form id="contact-form" class="contact-form" action="https://formspree.io/f/myzqgoqn" method="POST">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-field">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="email">Work email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-field">
+                <label for="role">Role</label>
+                <input type="text" id="role" name="role" placeholder="e.g., Head of Data, VP Product" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="focus">Primary focus</label>
+                <select id="focus" name="focus" required>
+                  <option value="">Select an option</option>
+                  <optgroup label="AI &amp; Data Science">
+                    <option value="generative-ai-llms">Generative AI &amp; LLMs</option>
+                    <option value="ai-agents">AI Agents &amp; Chatbots</option>
+                    <option value="computer-vision">Computer Vision</option>
+                    <option value="predictive-analytics">Predictive Analytics</option>
+                    <option value="machine-learning-mlops">Machine Learning &amp; MLOps</option>
+                    <option value="rag-pipelines">RAG Pipelines</option>
+                  </optgroup>
+                  <optgroup label="Data Engineering &amp; BI">
+                    <option value="data-engineering">Data Engineering</option>
+                    <option value="dashboarding-bi">Dashboarding &amp; BI Solutions</option>
+                    <option value="strategy">Data Strategy &amp; Enablement</option>
+                  </optgroup>
+                  <optgroup label="Software Development">
+                    <option value="web-development">Web Development</option>
+                    <option value="mobile-app-development">Mobile App Development</option>
+                    <option value="general-consultancy">General Consultancy</option>
+                  </optgroup>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="timeline">Ideal timeline</label>
+                <select id="timeline" name="timeline">
+                  <option value="">Select timeline</option>
+                  <option value="0-3">0–3 months</option>
+                  <option value="3-6">3–6 months</option>
+                  <option value="6-12">6–12 months</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="budget">Rough budget range (USD)</label>
+                <select id="budget" name="budget">
+                  <option value="">Select a range</option>
+                  <option value="50-100">50k–100k</option>
+                  <option value="100-250">100k–250k</option>
+                  <option value="250-500">250k–500k</option>
+                  <option value="500-plus">500k+</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="message">Project details</label>
+              <textarea id="message" name="message" rows="5"
+                placeholder="What problem are you trying to solve? What does success look like?" required></textarea>
+            </div>
+            <div class="form-footnote">
+              <p>We’ll review your message and respond within one business day.</p>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit inquiry</button>
+          </form>
+        </div>
+
+        <aside class="card contact-aside">
+          <h2>Other ways to connect</h2>
+          <ul class="card-list">
+            <li><strong>Email:</strong> shashank.datawiz808@gmail.com</li>
+            <li><strong>Typical response time:</strong> &lt; 1 business day</li>
+            <li><strong>Engagements:</strong> Remote‑first, with on‑site sessions for key milestones.</li>
+          </ul>
+          <h3>What to expect from our first call</h3>
+          <ol class="card-list ordered">
+            <li>We’ll clarify your goals, constraints, and timelines.</li>
+            <li>We’ll ask a few questions about your data stack and team.</li>
+            <li>We’ll outline 1–2 practical options for moving forward.</li>
+          </ol>
+          <p class="small-muted">
+            No hard sell, ever. If we’re not the right fit, we’ll say so—and, where possible, point you toward a
+            better option.
+          </p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="nav-logo-mark">Q</span>
+        <span class="footer-logo-text">Quantora Analytics</span>
+        <p class="footer-tagline">Data science, machine learning, and AI for modern teams.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <p class="footer-heading">Company</p>
+          <a href="../about/index.html">About</a>
+          <a href="../case-studies/index.html">Case Studies</a>
+          <a href="../services/index.html">Services</a>
+          <a href="../consultancy/index.html">Consultancy</a>
+          <a href="../internship/index.html">Internship</a>
+        </div>
+        <div>
+          <p class="footer-heading">Expertise</p>
+          <span>Generative AI &amp; LLMs</span>
+          <span>Computer Vision</span>
+          <span>MLOps &amp; Engineering</span>
+          <span>Data Strategy &amp; BI</span>
+        </div>
+        <div>
+          <p class="footer-heading">Get in touch</p>
+          <a href="index.html">Contact</a>
+          <span>shashank.datawiz808@gmail.com</span>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© <span id="footer-year"></span> Quantora Analytics. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script>
+    // Inline AJAX Handler to ensure it loads
+    document.getElementById('contact-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const form = this;
+      const btn = form.querySelector('button[type="submit"]');
+      let statusEl = form.querySelector('.form-status');
+
+      if (!statusEl) {
+        statusEl = document.createElement('p');
+        statusEl.className = 'form-status';
+        form.appendChild(statusEl);
+      }
+
+      const originalBtnText = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      try {
+        const data = new FormData(form);
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          statusEl.textContent = "Thanks! Your message has been sent.";
+          statusEl.className = "form-status success";
+          statusEl.style.color = "#bbf7d0";
+          form.reset();
+        } else {
+          const result = await response.json();
+          if (Object.hasOwn(result, 'errors')) {
+            statusEl.textContent = result["errors"].map(error => error["message"]).join(", ");
+          } else {
+            statusEl.textContent = "Oops! There was a problem submitting your form.";
+          }
+          statusEl.className = "form-status error";
+          statusEl.style.color = "#f97373";
+        }
+      } catch (error) {
+        statusEl.textContent = "Oops! There was a problem submitting your form.";
+        statusEl.className = "form-status error";
+        statusEl.style.color = "#f97373";
+      } finally {
+        btn.textContent = originalBtnText;
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+
+</html>

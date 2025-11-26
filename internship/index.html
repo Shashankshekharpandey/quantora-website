@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <title>Internship Program – Quantora Analytics</title>
+  <meta name="description"
+    content="Launch your career in AI, Machine Learning, and Data Science with Quantora Analytics. Hands-on 3, 6, and 12-month internships for future tech leaders." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="nav-logo-mark">Q</span>
+        <span class="nav-logo-text">Quantora<span class="nav-logo-faded"> Analytics</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../services/index.html" class="nav-link">Services</a></li>
+          <li><a href="../case-studies/index.html" class="nav-link">Case Studies</a></li>
+          <li><a href="../about/index.html" class="nav-link">About</a></li>
+          <li><a href="../consultancy/index.html" class="nav-link">Consultancy</a></li>
+          <li><a href="index.html" class="nav-link nav-link-active">Internship</a></li>
+          <li><a href="../contact/index.html" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#apply" class="btn btn-sm btn-primary nav-cta">Apply Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="section page-hero" data-animate>
+      <div class="container narrow">
+        <p class="kicker">Quantora AI Academy</p>
+        <h1>Build the future of Intelligence.</h1>
+        <p class="section-intro">
+          Don't just watch the AI revolution—engineer it. Join our elite internship program and work on production-grade
+          Generative AI, MLOps, and Data Science projects from day one.
+        </p>
+        <div class="hero-actions" style="justify-content: center; margin-top: 2rem;">
+          <a href="#programs" class="btn btn-primary">View Programs</a>
+          <a href="#benefits" class="btn btn-ghost">Why Intern With Us?</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits" class="section" data-animate>
+      <div class="container">
+        <div class="section-header">
+          <p class="kicker">The Experience</p>
+          <h2>More than just an internship.</h2>
+          <p class="section-intro">
+            We treat interns as junior engineers. No coffee runs, just code commits, model training, and real impact.
+          </p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Production AI</h3>
+            <p>
+              Work with state-of-the-art LLMs (GPT-4, Llama 3), vector databases, and RAG pipelines. Ship features that
+              real clients use.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Mentorship</h3>
+            <p>
+              Pair program with senior data scientists and ML engineers. Weekly code reviews and career guidance
+              sessions.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Certification</h3>
+            <p>
+              Receive a verified industry certification upon completion, plus a portfolio of deployed projects to
+              showcase.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs -->
+    <section id="programs" class="section section-alt" data-animate>
+      <div class="container">
+        <div class="section-header">
+          <p class="kicker">Choose your path</p>
+          <h2>Structured programs for every stage.</h2>
+        </div>
+        <div class="grid grid-3">
+          <!-- 3 Month -->
+          <article class="card program-card">
+            <div class="program-badge">Quick Start</div>
+            <h3>3 Month Sprint</h3>
+            <p class="program-price">Foundation &amp; Fundamentals</p>
+            <p>Perfect for students looking to build a strong core in Data Science and basic ML.</p>
+            <ul class="card-list">
+              <li>Python &amp; SQL Mastery</li>
+              <li>Prompt Engineering</li>
+              <li>Exploratory Data Analysis (EDA)</li>
+              <li>Intro to Machine Learning models</li>
+              <li>1 Capstone Project</li>
+            </ul>
+            <a href="#apply" onclick="selectProgram('3month')" class="btn btn-sm btn-ghost"
+              style="width: 100%; margin-top: 1.5rem;">Apply for 3 Months</a>
+          </article>
+
+          <!-- 6 Month -->
+          <article class="card program-card featured-program">
+            <div class="program-badge badge-highlight">Most Popular</div>
+            <h3>6 Month Deep Dive</h3>
+            <p class="program-price">Specialization &amp; Scale</p>
+            <p>Ideal for those ready to specialize in NLP, Computer Vision, or MLOps.</p>
+            <ul class="card-list">
+              <li>Advanced Deep Learning (PyTorch/TF)</li>
+              <li>LLM Fine-tuning &amp; Agentic AI</li>
+              <li>RAG Pipelines &amp; Vector DBs</li>
+              <li>Model Deployment (Docker/FastAPI)</li>
+              <li>2 Real-world Projects</li>
+            </ul>
+            <a href="#apply" onclick="selectProgram('6month')" class="btn btn-sm btn-primary"
+              style="width: 100%; margin-top: 1.5rem;">Apply for 6 Months</a>
+          </article>
+
+          <!-- 1 Year -->
+          <article class="card program-card">
+            <div class="program-badge">Professional</div>
+            <h3>1 Year Fellowship</h3>
+            <p class="program-price">Architect &amp; Lead</p>
+            <p>For aspiring lead engineers. Own entire lifecycles from data engineering to production AI.</p>
+            <ul class="card-list">
+              <li>End-to-End MLOps Pipelines</li>
+              <li>System Architecture Design</li>
+              <li>Client-facing consulting experience</li>
+              <li>End-to-end Generative AI Capstone</li>
+            </ul>
+            <a href="#apply" onclick="selectProgram('1year')" class="btn btn-sm btn-ghost"
+              style="width: 100%; margin-top: 1.5rem;">Apply for 1 Year</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section class="section stack-section" data-animate>
+      <!-- Background Animation -->
+      <div class="stack-bg">
+        <div class="stack-blob blob-1"></div>
+        <div class="stack-blob blob-2"></div>
+      </div>
+
+      <div class="container" style="position: relative; z-index: 2;">
+        <div class="section-header">
+          <p class="kicker">The Tooling</p>
+          <h2>Master the modern AI stack.</h2>
+        </div>
+
+        <!-- Animated Tool Marquee -->
+        <div class="marquee-wrapper tool-marquee">
+          <div class="logos-row">
+            <!-- Set 1 -->
+            <span class="pill">Python</span>
+            <span class="pill">PyTorch</span>
+            <span class="pill">TensorFlow</span>
+            <span class="pill">LangChain</span>
+            <span class="pill">LangGraph</span>
+            <span class="pill">Hugging Face</span>
+            <span class="pill">Llama 3</span>
+            <span class="pill">Grok</span>
+            <span class="pill">Gemini</span>
+            <span class="pill">OpenAI API</span>
+            <span class="pill">Pinecone</span>
+            <span class="pill">FAISS</span>
+            <span class="pill">Agentic AI</span>
+            <span class="pill">RAG</span>
+            <span class="pill">Prompt Engineering</span>
+            <span class="pill">Docker</span>
+            <span class="pill">Kubernetes</span>
+            <span class="pill">AWS</span>
+            <span class="pill">FastAPI</span>
+            <span class="pill">MLflow</span>
+
+            <!-- Set 2 (Duplicate) -->
+            <span class="pill">Python</span>
+            <span class="pill">PyTorch</span>
+            <span class="pill">TensorFlow</span>
+            <span class="pill">LangChain</span>
+            <span class="pill">LangGraph</span>
+            <span class="pill">Hugging Face</span>
+            <span class="pill">Llama 3</span>
+            <span class="pill">Grok</span>
+            <span class="pill">Gemini</span>
+            <span class="pill">OpenAI API</span>
+            <span class="pill">Pinecone</span>
+            <span class="pill">FAISS</span>
+            <span class="pill">Agentic AI</span>
+            <span class="pill">RAG</span>
+            <span class="pill">Prompt Engineering</span>
+            <span class="pill">Docker</span>
+            <span class="pill">Kubernetes</span>
+            <span class="pill">AWS</span>
+            <span class="pill">FastAPI</span>
+            <span class="pill">MLflow</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Form -->
+    <section id="apply" class="section section-cta stack-section" data-animate>
+      <!-- Background Animation -->
+      <div class="stack-bg">
+        <div class="stack-blob blob-1" style="top: 20%; left: -10%;"></div>
+        <div class="stack-blob blob-2" style="bottom: 20%; right: -10%;"></div>
+      </div>
+
+      <div class="container narrow" style="position: relative; z-index: 2;">
+        <div class="section-header" style="text-align: center;">
+          <p class="kicker">Join the Squad</p>
+          <h2>Apply for the Quantora AI Academy</h2>
+          <p class="section-intro" style="margin: 0 auto;">
+            Show us what you've built. We value GitHub repos and live projects over GPA.
+          </p>
+        </div>
+
+        <div class="card" style="margin-top: 2rem;">
+          <form class="contact-form" id="internshipForm" action="https://formspree.io/f/myzqgoqn" method="POST">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="jane@university.edu" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" placeholder="+1 (555) 000-0000" required />
+              </div>
+              <div class="form-field">
+                <label for="program">Interested Program</label>
+                <select id="program" name="program" required>
+                  <option value="" disabled selected>Select a program...</option>
+                  <option value="3month">3 Month Sprint</option>
+                  <option value="6month">6 Month Deep Dive</option>
+                  <option value="1year">1 Year Fellowship</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="portfolio">LinkedIn / GitHub / Portfolio URL</label>
+              <input type="text" id="portfolio" name="portfolio" placeholder="https://github.com/username" required />
+            </div>
+
+            <div class="form-field">
+              <label for="why-us">Why do you want to join Quantora?</label>
+              <textarea id="why-us" name="why-us"
+                placeholder="Tell us about a project you're proud of or what you want to build..." required></textarea>
+            </div>
+
+            <div class="form-field">
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Application</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="nav-logo-mark">Q</span>
+        <span class="footer-logo-text">Quantora Analytics</span>
+        <p class="footer-tagline">Data science, machine learning, and AI for modern teams.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <p class="footer-heading">Company</p>
+          <a href="../about/index.html">About</a>
+          <a href="../case-studies/index.html">Case Studies</a>
+          <a href="../services/index.html">Services</a>
+          <a href="../consultancy/index.html">Consultancy</a>
+          <a href="index.html">Internship</a>
+        </div>
+        <div>
+          <p class="footer-heading">Expertise</p>
+          <span>Generative AI &amp; LLMs</span>
+          <span>Computer Vision</span>
+          <span>MLOps &amp; Engineering</span>
+          <span>Data Strategy &amp; BI</span>
+        </div>
+        <div>
+          <p class="footer-heading">Get in touch</p>
+          <a href="../contact/index.html">Contact</a>
+          <span>shashank.datawiz808@gmail.com</span>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© <span id="footer-year"></span> Quantora Analytics. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script>
+    // Simple script to handle program selection from cards
+    function selectProgram(value) {
+      const select = document.getElementById('program');
+      if (select) {
+        select.value = value;
+        // Smooth scroll is handled by anchor tag default behavior somewhat, 
+        // but this ensures the select updates before the user arrives.
+      }
+    }
+
+    // Check URL params on load
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const program = params.get('program');
+      if (program) {
+        selectProgram(program);
+        // scroll to form if param exists
+        const formSection = document.getElementById('apply');
+        if (formSection) formSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+
+    // Inline AJAX Handler to ensure it loads
+    document.getElementById('internshipForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const form = this;
+      const btn = form.querySelector('button[type="submit"]');
+      let statusEl = form.querySelector('.form-status');
+
+      if (!statusEl) {
+        statusEl = document.createElement('div');
+        statusEl.className = 'form-status';
+        statusEl.style.marginTop = '1rem';
+        form.appendChild(statusEl);
+      }
+
+      const originalBtnText = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      try {
+        const data = new FormData(form);
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          statusEl.textContent = "Thanks! Your application has been sent.";
+          statusEl.className = "form-status success";
+          statusEl.style.color = "#bbf7d0";
+          form.reset();
+        } else {
+          const result = await response.json();
+          if (Object.hasOwn(result, 'errors')) {
+            statusEl.textContent = result["errors"].map(error => error["message"]).join(", ");
+          } else {
+            statusEl.textContent = "Oops! There was a problem submitting your form.";
+          }
+          statusEl.className = "form-status error";
+          statusEl.style.color = "#f97373";
+        }
+      } catch (error) {
+        statusEl.textContent = "Oops! There was a problem submitting your form.";
+        statusEl.className = "form-status error";
+        statusEl.style.color = "#f97373";
+      } finally {
+        btn.textContent = originalBtnText;
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+
+</html>

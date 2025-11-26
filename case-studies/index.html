@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <title>Case Studies – Quantora Analytics</title>
+  <meta name="description"
+    content="See how Quantora Analytics delivers measurable results in predictive analytics, machine learning, MLOps, and data engineering for modern teams." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="nav-logo-mark">Q</span>
+        <span class="nav-logo-text">Quantora<span class="nav-logo-faded"> Analytics</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../services/index.html" class="nav-link">Services</a></li>
+          <li><a href="index.html" class="nav-link nav-link-active">Case Studies</a></li>
+          <li><a href="../about/index.html" class="nav-link">About</a></li>
+          <li><a href="../consultancy/index.html" class="nav-link">Consultancy</a></li>
+          <li><a href="../internship/index.html" class="nav-link">Internship</a></li>
+          <li><a href="../contact/index.html" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="../contact/index.html" class="btn btn-sm btn-primary nav-cta">Book a strategy call</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section page-hero" data-animate>
+      <div class="container narrow">
+        <p class="kicker">Case Studies</p>
+        <h1>Data science work that ships—and sticks.</h1>
+        <p class="section-intro">
+          Real‑world examples of predictive analytics, machine learning, MLOps, and data engineering
+          helping teams ship faster, decide smarter, and operate leaner.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" data-animate>
+      <div class="container">
+        <!-- Case Study 1: Agentic Chatbot -->
+        <article class="case-study card">
+          <header class="case-study-header">
+            <h2>Autonomous Customer Success Agent</h2>
+            <p class="case-meta">Client: FinTech Global • Industry: Financial Services</p>
+          </header>
+          <div class="case-grid">
+            <div>
+              <h3>Background</h3>
+              <p>
+                A global fintech unicorn with 10M+ users was overwhelmed by support tickets.
+                Traditional chatbots could only answer FAQs, forcing 80% of queries to human agents.
+              </p>
+
+              <h3>Problem</h3>
+              <p>
+                Support costs were ballooning ($15M/year). Customers faced 48-hour wait times for simple actions
+                like refund processing or account tier upgrades, leading to high churn.
+              </p>
+
+              <h3>Solution</h3>
+              <p>
+                We built a Level 4 Autonomous Agent capable of executing complex workflows.
+                It doesn't just chat; it authenticates users, checks eligibility, and performs write-actions
+                directly in the core banking system.
+              </p>
+            </div>
+            <div>
+              <h3>Data methodology</h3>
+              <ul class="card-list">
+                <li>Orchestrated a swarm of specialized agents (Triage, Auth, Action, Compliance) using LangGraph.</li>
+                <li>Implemented "Tool Use" for direct API integration with Salesforce, Stripe, and internal ledgers.
+                </li>
+                <li>Designed a dynamic context window that retrieves user history and policy docs via RAG.</li>
+                <li>Deployed a "Constitutional AI" guardrail layer to prevent hallucinations in financial advice.</li>
+              </ul>
+
+              <h3>Tools used</h3>
+              <p class="tools-line">
+                Python, LangGraph, GPT-4o, Pinecone, FastAPI, Kubernetes, Datadog
+              </p>
+
+              <h3>Results</h3>
+              <ul class="case-results">
+                <li><strong>75% of tickets</strong> fully resolved without human intervention.</li>
+                <li><strong>$8.5M annual savings</strong> in support operations costs.</li>
+                <li><strong>&lt;3 seconds</strong> average time to resolution for complex account actions.</li>
+                <li><strong>CSAT score increased</strong> from 3.2 to 4.8/5.0.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case Study 2: Enterprise RAG -->
+        <article class="case-study card" data-animate>
+          <header class="case-study-header">
+            <h2>Corporate Knowledge Brain (Enterprise RAG)</h2>
+            <p class="case-meta">Client: BioPharma Giant • Industry: Pharmaceuticals</p>
+          </header>
+          <div class="case-grid">
+            <div>
+              <h3>Background</h3>
+              <p>
+                R&D scientists spent 40% of their time searching through 50 years of internal research papers,
+                clinical trial logs, and FDA filings scattered across SharePoint and legacy drives.
+              </p>
+
+              <h3>Problem</h3>
+              <p>
+                Critical insights were lost in "data silos," leading to redundant experiments and
+                delayed drug discovery pipelines. Keyword search was useless for conceptual queries.
+              </p>
+
+              <h3>Solution</h3>
+              <p>
+                We deployed a secure, multi-modal RAG system indexing 15 million documents.
+                It understands chemistry formulas, tables, and handwriting, allowing scientists to "chat" with their
+                entire collective knowledge.
+              </p>
+            </div>
+            <div>
+              <h3>Data methodology</h3>
+              <ul class="card-list">
+                <li>Built a hybrid search engine combining dense vector retrieval (semantic) and sparse keyword search
+                  (BM25).</li>
+                <li>Implemented document-level security permissions (ACLs) to ensure data privacy.</li>
+                <li>Fine-tuned embedding models on biomedical corpus for superior domain accuracy.</li>
+                <li>Added "Citation Mode" where every answer links directly to the source paragraph and page.</li>
+              </ul>
+
+              <h3>Tools used</h3>
+              <p class="tools-line">
+                Weaviate, LangChain, LlamaIndex, Unstructured.io, Azure OpenAI, React
+              </p>
+
+              <h3>Results</h3>
+              <ul class="case-results">
+                <li><strong>12 hours saved</strong> per scientist per week in literature review.</li>
+                <li><strong>30% acceleration</strong> in early-stage drug discovery phases.</li>
+                <li><strong>Zero data leaks</strong> verified by third-party security audit.</li>
+                <li><strong>Adoption</strong> by 4,000+ researchers globally within 3 months.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case Study 3: Supply Chain -->
+        <article class="case-study card" data-animate>
+          <header class="case-study-header">
+            <h2>Autonomous Supply Chain Orchestrator</h2>
+            <p class="case-meta">Client: Global Logistics Co. • Industry: Logistics & Supply Chain</p>
+          </header>
+          <div class="case-grid">
+            <div>
+              <h3>Background</h3>
+              <p>
+                Managing a global supply chain involves thousands of variables: weather, tariffs, port congestion, and
+                demand spikes.
+                Human planners were overwhelmed by the complexity.
+              </p>
+
+              <h3>Problem</h3>
+              <p>
+                Reactive decision-making led to massive detention/demurrage fees and stockouts.
+                The company needed a system that could predict disruptions and <em>act</em> on them.
+              </p>
+
+              <h3>Solution</h3>
+              <p>
+                We built a "Digital Twin" of the supply chain powered by Reinforcement Learning agents.
+                The system autonomously re-routes shipments and re-allocates inventory to optimize for cost and speed.
+              </p>
+            </div>
+            <div>
+              <h3>Data methodology</h3>
+              <ul class="card-list">
+                <li>Ingested real-time satellite data, shipping manifests, and weather APIs.</li>
+                <li>Trained Multi-Agent Reinforcement Learning (MARL) models to simulate millions of scenarios.</li>
+                <li>Connected agents to ERP systems to trigger purchase orders and carrier bookings automatically.</li>
+                <li>Built a "Control Tower" dashboard for human oversight of high-value decisions.</li>
+              </ul>
+
+              <h3>Tools used</h3>
+              <p class="tools-line">
+                Ray RLLib, Python, Kafka, Snowflake, Tableau, AWS SageMaker
+              </p>
+
+              <h3>Results</h3>
+              <ul class="case-results">
+                <li><strong>$42M reduction</strong> in annual logistics spend.</li>
+                <li><strong>98% on-time delivery</strong> rate, up from 82%.</li>
+                <li><strong>Automated negotiation</strong> with carriers for spot rates, saving 15% on average.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case Study 4: Medical AI -->
+        <article class="case-study card" data-animate>
+          <header class="case-study-header">
+            <h2>Multi-Modal Medical Diagnostic Assistant</h2>
+            <p class="case-meta">Client: HealthTech Innovator • Industry: Healthcare</p>
+          </header>
+          <div class="case-grid">
+            <div>
+              <h3>Background</h3>
+              <p>
+                Radiologists and clinicians are burnt out, reviewing hundreds of scans daily.
+                Misdiagnosis rates due to fatigue were a growing concern.
+              </p>
+
+              <h3>Problem</h3>
+              <p>
+                Doctors needed a "second pair of eyes" that could synthesize imaging data (X-rays, MRIs)
+                with unstructured electronic health records (EHR) and genetic markers.
+              </p>
+
+              <h3>Solution</h3>
+              <p>
+                We developed a HIPAA-compliant Multi-Modal AI that analyzes images and text simultaneously.
+                It generates differential diagnoses with confidence intervals and highlights regions of interest.
+              </p>
+            </div>
+            <div>
+              <h3>Data methodology</h3>
+              <ul class="card-list">
+                <li>Trained a Vision-Language Model (VLM) on 2M+ anonymized medical image-report pairs.</li>
+                <li>Implemented "Explainable AI" (XAI) heatmaps to show doctors <em>why</em> the model made a
+                  prediction.</li>
+                <li>Integrated with HL7/FHIR standards for seamless hospital workflow insertion.</li>
+                <li>Achieved FDA "Software as a Medical Device" (SaMD) clearance readiness.</li>
+              </ul>
+
+              <h3>Tools used</h3>
+              <p class="tools-line">
+                PyTorch, MONAI, transformers, NVIDIA Clara, AWS HealthLake
+              </p>
+
+              <h3>Results</h3>
+              <ul class="case-results">
+                <li><strong>99.3% sensitivity</strong> in detecting early-stage anomalies.</li>
+                <li><strong>60% reduction</strong> in radiologist review time per scan.</li>
+                <li><strong>Ranked #1</strong> in internal blind tests against senior specialists for rare pathologies.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case Study 5: Financial Trading -->
+        <article class="case-study card" data-animate>
+          <header class="case-study-header">
+            <h2>Real-Time Financial Sentiment Trading Engine</h2>
+            <p class="case-meta">Client: Hedge Fund • Industry: Capital Markets</p>
+          </header>
+          <div class="case-grid">
+            <div>
+              <h3>Background</h3>
+              <p>
+                In high-frequency trading, milliseconds matter. Traditional quant models relied on price history,
+                missing the alpha hidden in unstructured news and social sentiment.
+              </p>
+
+              <h3>Problem</h3>
+              <p>
+                The fund wanted to capitalize on market-moving news events (earnings calls, geopolitical shifts)
+                before the broader market reacted.
+              </p>
+
+              <h3>Solution</h3>
+              <p>
+                We engineered an ultra-low-latency NLP pipeline that ingests global news feeds,
+                analyzes sentiment/impact, and executes trades in sub-millisecond timeframes.
+              </p>
+            </div>
+            <div>
+              <h3>Data methodology</h3>
+              <ul class="card-list">
+                <li>Built a custom BERT-based model optimized for financial jargon and "Fedspeak".</li>
+                <li>Deployed on FPGA-accelerated hardware for microsecond inference speeds.</li>
+                <li>Connected directly to exchange co-location centers to minimize network hops.</li>
+                <li>Implemented rigorous backtesting on 10 years of tick-level data.</li>
+              </ul>
+
+              <h3>Tools used</h3>
+              <p class="tools-line">
+                C++, Python, PyTorch, FPGA, KDB+, Bloomberg API
+              </p>
+
+              <h3>Results</h3>
+              <ul class="case-results">
+                <li><strong>22% annualized alpha</strong> over the benchmark index.</li>
+                <li><strong>
+                    < 50 microseconds</strong> tick-to-trade latency.</li>
+                <li><strong>Scalable</strong> to process 100,000+ news items per second during market open.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case Study 4: Agentic AI -->
+        <article class="case-study card" data-animate>
+          <header class="case-study-header">
+            <h2>Agentic AI for Legal Contract Review</h2>
+            <p class="case-meta">Client: LexisTech • Industry: LegalTech</p>
+          </header>
+          <div class="case-grid">
+            <div>
+              <h3>Background</h3>
+              <p>
+                A mid-sized legal firm was manually reviewing thousands of supplier contracts during M&A due diligence,
+                creating a massive bottleneck.
+              </p>
+              <h3>Problem</h3>
+              <p>
+                Lawyers spent 70% of their time on rote clause identification rather than risk analysis.
+                Turnaround times were slow, and human error in spotting "change of control" clauses was a risk.
+              </p>
+              <h3>Solution</h3>
+              <p>
+                We built a multi-agent AI system using LangGraph where specialized agents (Parser, Analyst, Reviewer)
+                collaborated to extract, classify, and flag high-risk clauses automatically.
+              </p>
+            </div>
+            <div>
+              <h3>Data methodology</h3>
+              <ul class="card-list">
+                <li>Ingested PDF/Docx files via OCR and layout-aware parsing.</li>
+                <li>Orchestrated agents: one to extract text, one to check against risk playbooks, one to summarize.
+                </li>
+                <li>Used RAG to ground answers in the specific contract text, citing page numbers.</li>
+                <li>Implemented "Human-in-the-Loop" breakpoints for low-confidence flags.</li>
+              </ul>
+              <h3>Tools used</h3>
+              <p class="tools-line">
+                LangChain, LangGraph, GPT-4o, Pinecone, Docker, React Frontend
+              </p>
+              <h3>Results</h3>
+              <ul class="case-results">
+                <li><strong>90% reduction</strong> in initial contract review time per document.</li>
+                <li><strong>Zero missed</strong> critical risk clauses in blind benchmark testing.</li>
+                <li><strong>Scalable</strong> to 10,000+ documents per day without adding headcount.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case Study 5: Computer Vision -->
+        <article class="case-study card" data-animate>
+          <header class="case-study-header">
+            <h2>Computer Vision for Automated Quality Control</h2>
+            <p class="case-meta">Client: AutoParts Co. • Industry: Manufacturing</p>
+          </header>
+          <div class="case-grid">
+            <div>
+              <h3>Background</h3>
+              <p>
+                An automotive parts supplier relied on visual inspection by human operators to catch surface defects on
+                metal stampings.
+              </p>
+              <h3>Problem</h3>
+              <p>
+                Fatigue led to inconsistent inspection rates. Defect escapement to the customer was 3%, leading to
+                costly returns and reputation damage.
+              </p>
+              <h3>Solution</h3>
+              <p>
+                Deployed an Edge AI computer vision system on the assembly line cameras to detect scratches, dents, and
+                rust in real-time (30fps).
+              </p>
+            </div>
+            <div>
+              <h3>Data methodology</h3>
+              <ul class="card-list">
+                <li>Collected and annotated 5,000+ images of defective and clean parts.</li>
+                <li>Trained a YOLOv8 object detection model optimized for inference speed.</li>
+                <li>Deployed via TensorRT on NVIDIA Jetson edge devices for low-latency processing.</li>
+                <li>Connected to PLC to automatically trigger reject chutes for bad parts.</li>
+              </ul>
+              <h3>Tools used</h3>
+              <p class="tools-line">
+                PyTorch, YOLOv8, NVIDIA TensorRT, OpenCV, MQTT, Edge Impulse
+              </p>
+              <h3>Results</h3>
+              <ul class="case-results">
+                <li><strong>99.5% defect detection rate</strong>, surpassing human accuracy.</li>
+                <li><strong>$1.2M annual savings</strong> in returns and rework costs.</li>
+                <li><strong>Real-time dashboard</strong> of defect types and frequency for root cause analysis.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section section-alt" data-animate>
+      <div class="container">
+        <div class="section-header">
+          <p class="kicker">GenAI initiatives</p>
+          <h2>LLM and Hugging Face projects shipped to production.</h2>
+          <p class="section-intro">
+            We pair cutting-edge models with responsible AI guardrails, LLMOps automation, and measurable KPIs so that
+            generative AI programs stay aligned with business outcomes.
+          </p>
+        </div>
+        <div class="grid grid-2">
+          <article class="card">
+            <h3>Enterprise knowledge copilot</h3>
+            <p class="case-meta">Global professional services firm • GPT-4o + Llama 3 hybrid</p>
+            <ul class="card-list">
+              <li>Designed retrieval-augmented generation (RAG) pipeline with vector search, metadata filtering, and
+                policy guardrails.</li>
+              <li>Implemented LLMOps stack with prompt/version registry, automated hallucination testing, and cost
+                observability.</li>
+              <li><strong>Results:</strong> 58% faster analyst research cycles, 92% reduction in unsupported answers,
+                $480K annual cost avoidance.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Multimodal service assistant</h3>
+            <p class="case-meta">Smart mobility OEM • Hugging Face Transformers + Vision encoders</p>
+            <ul class="card-list">
+              <li>Fine-tuned open-weight models with LoRA/QLoRA on Hugging Face, deployed via TensorRT on edge GPUs.
+              </li>
+              <li>Built LLMOps workflows for prompt orchestration, real-time safety filters, and human-in-the-loop
+                review.</li>
+              <li><strong>Results:</strong> 41% increase in first-contact resolution, 28% reduction in support cost per
+                ticket, &lt;900ms response latency.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta" data-animate>
+      <div class="container cta-inner">
+        <div>
+          <p class="kicker">Your story next</p>
+          <h2>Have a dataset and a hypothesis? Let’s validate it.</h2>
+          <p>
+            Bring us your raw data and a target KPI. We’ll quickly assess feasibility, outline the modeling
+            approach, and estimate the impact you can expect.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <a href="../contact/index.html" class="btn btn-primary">Schedule a discovery call</a>
+          <a href="../services/index.html" class="btn btn-ghost">Explore services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="nav-logo-mark">Q</span>
+        <span class="footer-logo-text">Quantora Analytics</span>
+        <p class="footer-tagline">Data science, machine learning, and AI for modern teams.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <p class="footer-heading">Company</p>
+          <a href="../about/index.html">About</a>
+          <a href="index.html">Case Studies</a>
+          <a href="../services/index.html">Services</a>
+          <a href="../consultancy/index.html">Consultancy</a>
+          <a href="../internship/index.html">Internship</a>
+        </div>
+        <div>
+          <p class="footer-heading">Expertise</p>
+          <span>Generative AI &amp; LLMs</span>
+          <span>Computer Vision</span>
+          <span>MLOps &amp; Engineering</span>
+          <span>Data Strategy &amp; BI</span>
+        </div>
+        <div>
+          <p class="footer-heading">Get in touch</p>
+          <a href="../contact/index.html">Contact</a>
+          <span>shashank.datawiz808@gmail.com</span>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© <span id="footer-year"></span> Quantora Analytics. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+
+</html>
