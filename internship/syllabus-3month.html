@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <title>3-Month Internship Syllabus – Quantora Analytics</title>
+  <meta name="description"
+    content="Detailed syllabus for the 3-Month Data Science & AI Internship at Quantora Analytics. Weeks 1-12 breakdown with projects and assignments." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    /* Syllabus Specific Styles */
+    .syllabus-hero {
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      text-align: center;
+    }
+    
+    .syllabus-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .module-card {
+      background: radial-gradient(circle at top left, rgba(30, 64, 175, 0.2), rgba(15, 23, 42, 0.6));
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      margin-bottom: 2rem;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+
+    .module-card:hover {
+      border-color: rgba(59, 130, 246, 0.4);
+    }
+
+    .module-header {
+      padding: 1.5rem 2rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(15, 23, 42, 0.4);
+      border-bottom: 1px solid transparent;
+      transition: background 0.2s ease;
+    }
+
+    .module-header:hover {
+      background: rgba(15, 23, 42, 0.8);
+    }
+    
+    .module-header.active {
+      border-bottom-color: var(--border-subtle);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .module-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      font-family: "Space Grotesk", sans-serif;
+      color: var(--text-main);
+      margin: 0;
+    }
+
+    .module-toggle {
+      width: 24px;
+      height: 24px;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .module-toggle::before,
+    .module-toggle::after {
+      content: '';
+      position: absolute;
+      background: var(--accent);
+      border-radius: 2px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .module-toggle::before {
+      width: 14px;
+      height: 2px;
+    }
+
+    .module-toggle::after {
+      width: 2px;
+      height: 14px;
+      transition: height 0.3s ease;
+    }
+
+    .module-header.active .module-toggle {
+      transform: rotate(180deg);
+    }
+
+    .module-header.active .module-toggle::after {
+      height: 0;
+    }
+
+    .module-content {
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    }
+
+    .module-content.open {
+      max-height: 4000px; 
+      transition: max-height 0.8s ease-in-out;
+    }
+
+    .module-inner {
+      padding: 2rem;
+    }
+
+    .topic-block {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .topic-block:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .topic-title {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .topic-details {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .topic-details li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .topic-details li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      background: rgba(59, 130, 246, 0.1);
+      color: var(--accent);
+      border-radius: 4px;
+      font-size: 0.75rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Interview Section Styles */
+    .interview-category {
+      margin-bottom: 2rem;
+    }
+    .interview-category h4 {
+      color: var(--text-main);
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 0.75rem;
+    }
+    .question-list {
+        list-style: decimal;
+        padding-left: 1.2rem;
+        color: var(--text-muted);
+    }
+    .question-list li {
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="nav-logo-mark">Q</span>
+        <span class="nav-logo-text">Quantora<span class="nav-logo-faded"> Analytics</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../services/index.html" class="nav-link">Services</a></li>
+          <li><a href="../case-studies/index.html" class="nav-link">Case Studies</a></li>
+          <li><a href="../about/index.html" class="nav-link">About</a></li>
+          <li><a href="../consultancy/index.html" class="nav-link">Consultancy</a></li>
+          <li><a href="index.html" class="nav-link nav-link-active">Internship</a></li>
+          <li><a href="../contact/index.html" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="index.html#apply" class="btn btn-sm btn-primary nav-cta">Apply Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="syllabus-hero section-alt">
+      <div class="container narrow">
+        <p class="kicker">Internship Curriculum</p>
+        <h1>3-Month Data Science Sprint</h1>
+        <p class="section-intro" style="margin: 0 auto;">
+          A comprehensive, hands-on roadmap to take you from Python basics to deploying GenAI applications. 
+          Includes weekly assignments, real-world projects, and code reviews.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container syllabus-container">
+        
+        <!-- Month 1 -->
+        <div class="module-card">
+          <div class="module-header" onclick="toggleModule(this)">
+            <div>
+                <span class="tag">Month 1</span>
+                <h3 class="module-title">Foundation & Fundamentals</h3>
+            </div>
+            <div class="module-toggle"></div>
+          </div>
+          <div class="module-content">
+            <div class="module-inner">
+              <div class="topic-block">
+                <div class="topic-title">Weeks 1-2: Python & SQL Mastery</div>
+                <p>Master the tools of the trade. Write clean, efficient Python code and query databases like a pro.</p>
+                <ul class="topic-details">
+                    <li><strong>Python Advanced:</strong> Decorators, Generators, Context Managers, OOP patterns.</li>
+                    <li><strong>Pandas & NumPy:</strong> Vectorization, Data cleaning, Merging/Joining datasets.</li>
+                    <li><strong>SQL:</strong> Complex Joins, Window Functions (RANK, LEAD/LAG), CTEs.</li>
+                </ul>
+                
+                <div style="margin-top: 1.5rem;">
+                    <strong>📝 Assignment 1: Sales Data Analysis</strong>
+                    <p class="small-muted">Clean a raw CSV of 50k retail transactions and generate a monthly sales report using Pandas.</p>
+                </div>
+              </div>
+
+              <div class="topic-block">
+                <div class="topic-title">Weeks 3-4: EDA & Visualization</div>
+                <p>Turn data into insights. Learn to tell stories with data using modern visualization libraries.</p>
+                <ul class="topic-details">
+                    <li><strong>Visualization:</strong> Matplotlib customization, Seaborn statistical plots, Plotly interactive charts.</li>
+                    <li><strong>EDA Techniques:</strong> Outlier detection, Distribution analysis, Correlation matrices.</li>
+                    <li><strong>Streamlit Basics:</strong> Building simple data apps.</li>
+                </ul>
+                
+                <div style="margin-top: 1.5rem;">
+                    <strong>🚀 Project 1: Market Trends Dashboard</strong>
+                    <p class="small-muted">Build an interactive dashboard using Streamlit that visualizes stock market data (using yfinance).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Month 2 -->
+        <div class="module-card">
+            <div class="module-header" onclick="toggleModule(this)">
+              <div>
+                  <span class="tag">Month 2</span>
+                  <h3 class="module-title">Machine Learning Core</h3>
+              </div>
+              <div class="module-toggle"></div>
+            </div>
+            <div class="module-content">
+              <div class="module-inner">
+                <div class="topic-block">
+                  <div class="topic-title">Weeks 5-6: Supervised & Unsupervised Learning</div>
+                  <p>Understand the math and code behind predictive models.</p>
+                  <ul class="topic-details">
+                      <li><strong>Regression:</strong> Linear/Logistic Regression, Metrics (RMSE, R2).</li>
+                      <li><strong>Classification:</strong> Decision Trees, Random Forests, SVM.</li>
+                      <li><strong>Clustering:</strong> K-Means, Hierarchical Clustering, PCA for dimensionality reduction.</li>
+                  </ul>
+                  
+                  <div style="margin-top: 1.5rem;">
+                      <strong>📝 Assignment 2: House Price Prediction</strong>
+                      <p class="small-muted">Build a regression model to predict house prices. Optimize hyperparameters using GridSearch.</p>
+                  </div>
+                </div>
+
+                <div class="topic-block">
+                  <div class="topic-title">Week 7: Prompt Engineering Fundamentals</div>
+                  <p>Learn to communicate effectively with AI models.</p>
+                  <ul class="topic-details">
+                      <li><strong>Core Concepts:</strong> Context windows, Temperature, Top-P, Frequency penalty.</li>
+                      <li><strong>Techniques:</strong> Role prompting, Delimiters, Output formatting (JSON/Markdown).</li>
+                      <li><strong>Tools:</strong> OpenAI Playground, Anthropic Console, Cursor AI features.</li>
+                  </ul>
+                  
+                  <div style="margin-top: 1.5rem;">
+                      <strong>⚡ Mini-Project: "Code Refactoring Bot"</strong>
+                      <p class="small-muted">Design a system prompt that takes messy Python code and outputs clean, PEP-8 compliant code with docstrings.</p>
+                  </div>
+                </div>
+  
+                <div class="topic-block">
+                  <div class="topic-title">Week 8: Deep Learning Intro & Large Scale Projects</div>
+                  <p>Step into the world of Neural Networks and Industrial AI.</p>
+                  <ul class="topic-details">
+                      <li><strong>Neural Networks:</strong> Perceptrons, Backpropagation, Activation Functions.</li>
+                      <li><strong>Model Interpretability:</strong> SHAP values, LIME, Feature Importance.</li>
+                      <li><strong>Production ML:</strong> Model Drift detection, A/B Testing concepts.</li>
+                  </ul>
+                  
+                  <div style="margin-top: 1.5rem;">
+                      <strong>🚀 Project 2: End-to-End Customer Churn Prediction Platform</strong>
+                      <p class="small-muted">Build a robust Churn Prediction System for a Telecom dataset. The project involves:</p>
+                      <ul class="topic-details" style="margin-top: 0.5rem;">
+                        <li>Advanced Feature Engineering & Selection.</li>
+                        <li>Training XGBoost/LightGBM models with Hyperparameter tuning.</li>
+                        <li><strong>Explainable AI:</strong> Integrating SHAP plots to explain why a specific customer is at risk.</li>
+                        <li><strong>Deployment:</strong> Serving the model via FastAPI with a Drift Monitoring dashboard.</li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Month 3 -->
+        <div class="module-card">
+            <div class="module-header" onclick="toggleModule(this)">
+              <div>
+                  <span class="tag">Month 3</span>
+                  <h3 class="module-title">Advanced AI & Capstone</h3>
+              </div>
+              <div class="module-toggle"></div>
+            </div>
+            <div class="module-content">
+              <div class="module-inner">
+                <div class="topic-block">
+                  <div class="topic-title">Week 9: Advanced Prompt Engineering</div>
+                  <p>Master the art of controlling Large Language Models.</p>
+                  <ul class="topic-details">
+                      <li><strong>Prompting Frameworks:</strong> Zero-shot, Few-shot, Chain-of-Thought (CoT), ReAct.</li>
+                      <li><strong>System Prompts:</strong> Designing robust system instructions for role-playing agents.</li>
+                      <li><strong>Guardrails:</strong> Preventing hallucinations and jailbreaks using NeMo Guardrails or custom logic.</li>
+                      <li><strong>Evaluation:</strong> Measuring prompt performance using RAGAS or custom metrics.</li>
+                  </ul>
+                </div>
+
+                <div class="topic-block">
+                  <div class="topic-title">Week 10: NLP & Transformers</div>
+                  <p>Work with the latest GenAI technologies.</p>
+                  <ul class="topic-details">
+                      <li><strong>NLP Basics:</strong> Tokenization, Embeddings (Word2Vec, GloVe).</li>
+                      <li><strong>Transformers:</strong> Attention mechanism, BERT, GPT architecture.</li>
+                      <li><strong>LLM Application:</strong> LangChain basics, Memory management, Tool usage.</li>
+                  </ul>
+                  
+                  <div style="margin-top: 1.5rem;">
+                      <strong>📝 Assignment 3: Sentiment Analysis API</strong>
+                      <p class="small-muted">Deploy a FastAPI endpoint that takes text and returns sentiment using a Hugging Face model.</p>
+                  </div>
+                </div>
+  
+                <div class="topic-block">
+                  <div class="topic-title">Weeks 11-12: Capstone Project</div>
+                  <p>The final test. Build something production-ready.</p>
+                  <ul class="topic-details">
+                      <li><strong>RAG (Retrieval-Augmented Generation):</strong> Vector Databases (Pinecone/Chroma), Context injection.</li>
+                      <li><strong>Deployment:</strong> Dockerizing the app, Deploying to Cloud (AWS/Render).</li>
+                      <li><strong>Presentation:</strong> Demo day presentation.</li>
+                  </ul>
+                  
+                  <div style="margin-top: 1.5rem;">
+                      <strong>🏆 Capstone: "Chat with your PDF"</strong>
+                      <p class="small-muted">Build a RAG application where users upload a PDF and ask questions about it. Tech stack: LangChain, OpenAI, Streamlit, FAISS.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Interview Prep Module -->
+        <div class="module-card">
+          <div class="module-header" onclick="toggleModule(this)">
+            <div>
+                <span class="tag">Bonus</span>
+                <h3 class="module-title">Interview Preparation Kit (50 Questions)</h3>
+            </div>
+            <div class="module-toggle"></div>
+          </div>
+          <div class="module-content">
+            <div class="module-inner">
+              <p style="margin-bottom: 2rem;">A curated list of the most asked questions in Data Science and ML interviews.</p>
+              
+              <div class="interview-category">
+                <h4>🐍 Python & Programming (10)</h4>
+                <ol class="question-list">
+                    <li>What is the difference between a list and a tuple? Why would you use one over the other?</li>
+                    <li>Explain list comprehensions and how they differ from generator expressions.</li>
+                    <li>How does memory management work in Python? Explain garbage collection.</li>
+                    <li>What are decorators? Write a simple decorator that times a function.</li>
+                    <li>Explain the difference between `deepcopy` and `shallow copy`.</li>
+                    <li>What is the Global Interpreter Lock (GIL) and how does it affect multithreading?</li>
+                    <li>How do you handle exceptions in Python? Explain `try`, `except`, `else`, and `finally`.</li>
+                    <li>What is the difference between `is` and `==`?</li>
+                    <li>Explain the `with` statement and Context Managers.</li>
+                    <li>How would you optimize a Python script that is running slowly?</li>
+                </ol>
+              </div>
+
+              <div class="interview-category">
+                <h4>📊 SQL & Databases (10)</h4>
+                <ol class="question-list">
+                    <li>What is the difference between `INNER JOIN`, `LEFT JOIN`, and `FULL OUTER JOIN`?</li>
+                    <li>Explain the difference between `WHERE` and `HAVING` clauses.</li>
+                    <li>What are Window Functions? Explain `RANK()` vs `DENSE_RANK()`.</li>
+                    <li>What is a Common Table Expression (CTE) and when should you use it?</li>
+                    <li>Explain the difference between `DELETE`, `TRUNCATE`, and `DROP`.</li>
+                    <li>How do you optimize a slow SQL query? (Indexing, execution plans).</li>
+                    <li>What is Normalization vs Denormalization? When to use which?</li>
+                    <li>Explain ACID properties in databases.</li>
+                    <li>How do you handle NULL values in SQL?</li>
+                    <li>Write a query to find the second highest salary in a table.</li>
+                </ol>
+              </div>
+
+              <div class="interview-category">
+                <h4>🤖 Machine Learning (10)</h4>
+                <ol class="question-list">
+                    <li>What is the Bias-Variance Tradeoff? How do you manage it?</li>
+                    <li>Explain the difference between L1 (Lasso) and L2 (Ridge) regularization.</li>
+                    <li>How does a Random Forest work? What is bagging?</li>
+                    <li>What is Gradient Boosting? How does it differ from Random Forest?</li>
+                    <li>Explain Precision, Recall, and F1-Score. When should you prioritize one over the other?</li>
+                    <li>What is the ROC Curve and AUC?</li>
+                    <li>How do you handle imbalanced datasets? (SMOTE, Class weights).</li>
+                    <li>Explain K-Means clustering. How do you choose K? (Elbow method).</li>
+                    <li>What is Cross-Validation and why is it important?</li>
+                    <li>Explain the Curse of Dimensionality.</li>
+                </ol>
+              </div>
+
+              <div class="interview-category">
+                <h4>🧠 Deep Learning & NLP (10)</h4>
+                <ol class="question-list">
+                    <li>What is Backpropagation? Explain the chain rule.</li>
+                    <li>What is the Vanishing Gradient problem? How do `ReLU` or `LSTMs` solve it?</li>
+                    <li>Explain the architecture of a CNN (Convolution, Pooling, Fully Connected).</li>
+                    <li>What is Transfer Learning? When should you use it?</li>
+                    <li>What is an Activation Function? Why do we need non-linearity?</li>
+                    <li>Explain the Attention Mechanism in simple terms.</li>
+                    <li>What are Word Embeddings? (Word2Vec vs BERT embeddings).</li>
+                    <li>What is a Transformer? Explain Encoder vs Decoder architectures.</li>
+                    <li>What is RAG (Retrieval-Augmented Generation)?</li>
+                    <li>How do you fine-tune an LLM? (PEFT, LoRA).</li>
+                </ol>
+              </div>
+
+              <div class="interview-category">
+                <h4>💡 Behavioral & System Design (10)</h4>
+                <ol class="question-list">
+                    <li>Tell me about a time your model failed in production. How did you fix it?</li>
+                    <li>How do you explain a complex technical concept to a non-technical stakeholder?</li>
+                    <li>Describe a challenging data cleaning problem you faced.</li>
+                    <li>How would you design a Recommendation System for Netflix?</li>
+                    <li>How do you handle conflicting requirements from different teams?</li>
+                    <li>What is your process for starting a new data science project?</li>
+                    <li>How do you stay updated with the latest AI trends?</li>
+                    <li>Tell me about a time you had to learn a new tool quickly.</li>
+                    <li>How do you measure the business impact of your model?</li>
+                    <li>If you had unlimited computing power, what would you build?</li>
+                </ol>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="index.html#apply" class="btn btn-primary">Apply for this Program</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="nav-logo-mark">Q</span>
+        <span class="footer-logo-text">Quantora Analytics</span>
+        <p class="footer-tagline">Data science, machine learning, and AI for modern teams.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <p class="footer-heading">Company</p>
+          <a href="../about/index.html">About</a>
+          <a href="../case-studies/index.html">Case Studies</a>
+          <a href="../services/index.html">Services</a>
+          <a href="../consultancy/index.html">Consultancy</a>
+          <a href="index.html">Internship</a>
+        </div>
+        <div>
+          <p class="footer-heading">Expertise</p>
+          <span>Generative AI &amp; LLMs</span>
+          <span>Computer Vision</span>
+          <span>MLOps &amp; Engineering</span>
+          <span>Data Strategy &amp; BI</span>
+        </div>
+        <div>
+          <p class="footer-heading">Get in touch</p>
+          <a href="../contact/index.html">Contact</a>
+          <span>shashank.datawiz808@gmail.com</span>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© <span id="footer-year"></span> Quantora Analytics. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script>
+    // Accordion Logic
+    function toggleModule(header) {
+      const content = header.nextElementSibling;
+      const isOpen = content.classList.contains('open');
+      
+      // Close all others (optional, nice for focus)
+      document.querySelectorAll('.module-content').forEach(c => {
+        c.classList.remove('open');
+        c.previousElementSibling.classList.remove('active');
+      });
+
+      if (!isOpen) {
+        content.classList.add('open');
+        header.classList.add('active');
+      }
+    }
+
+    // Auto-open first module
+    document.addEventListener('DOMContentLoaded', () => {
+        const firstHeader = document.querySelector('.module-header');
+        if(firstHeader) toggleModule(firstHeader);
+    });
+  </script>
+</body>
+
+</html>

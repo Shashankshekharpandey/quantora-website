@@ -95,6 +95,136 @@
       </div>
     </section>
 
+    <!-- Credentials Preview -->
+    <section class="section" data-animate>
+      <div class="container">
+        <div class="section-header">
+          <p class="kicker">Proven Credentials</p>
+          <h2>Walk away with more than just experience.</h2>
+          <p class="section-intro">
+            Every intern receives a verifiable Certificate of Completion and a personalized Letter of Recommendation
+            highlighting their specific contributions.
+          </p>
+        </div>
+        
+        <style>
+          .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+          }
+          
+          .doc-preview {
+            background: #fff;
+            color: #1e293b;
+            padding: 2rem;
+            border-radius: 4px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            position: relative;
+            min-height: 380px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+          }
+          
+          .doc-preview:hover {
+            transform: translateY(-5px) scale(1.01);
+          }
+          
+          .doc-border {
+            border: 2px solid #cbd5e1;
+            height: 100%;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+          
+          .doc-logo {
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+          }
+          
+          .doc-title {
+            font-family: "Newsreader", "Times New Roman", serif;
+            font-size: 1.8rem;
+            color: #334155;
+            margin: 0 0 0.5rem;
+            line-height: 1.2;
+          }
+          
+          .doc-text {
+            font-family: "Newsreader", "Times New Roman", serif;
+            font-size: 1rem;
+            color: #475569;
+            line-height: 1.6;
+            margin: 1rem 0;
+          }
+          
+          .doc-signature {
+            margin-top: auto;
+            font-family: "Dancing Script", cursive;
+            font-size: 1.5rem;
+            color: #0f172a;
+            border-top: 1px solid #94a3b8;
+            padding-top: 0.5rem;
+            width: 180px;
+          }
+          
+          .lor-preview {
+            text-align: left;
+            align-items: flex-start;
+          }
+          
+          .lor-header {
+            border-bottom: 2px solid #0f172a;
+            width: 100%;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          
+          .lor-body {
+            font-family: "Newsreader", "Times New Roman", serif;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #334155;
+          }
+          
+          @media (max-width: 720px) {
+            .credentials-grid {
+              grid-template-columns: 1fr;
+            }
+          }
+        </style>
+        
+        <div class="credentials-grid" style="align-items: start;">
+          <!-- Certificate Mockup -->
+          <div style="display: flex; flex-direction: column;">
+            <div class="doc-preview" style="padding: 0; overflow: hidden; min-height: auto; border: none; background: transparent; box-shadow: 0 20px 50px rgba(0,0,0,0.2);">
+              <img src="../assets/img/Gold%20and%20Blue%20Elegant%20Internship%20Completion%20Certificate%20(1).png" alt="Quantora Internship Certificate" style="width: 100%; height: auto; display: block; border-radius: 4px;">
+            </div>
+            <p style="text-align: center; margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">Verified Certificate of Completion</p>
+          </div>
+          
+          <!-- LOR Mockup -->
+          <div style="display: flex; flex-direction: column;">
+            <div class="doc-preview" style="padding: 0; overflow: hidden; min-height: auto; border: none; background: transparent; box-shadow: 0 20px 50px rgba(0,0,0,0.2); height: 600px;">
+              <iframe src="../assets/img/Blue%20and%20White%20Clean%20Modern%20Minimalist%20Professional%20Letter%20of%20Recommendation.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" style="width: 100%; height: 100%; border: none; border-radius: 4px; background: #fff;"></iframe>
+            </div>
+            <p style="text-align: center; margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">Personalized Letter of Recommendation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Programs -->
     <section id="programs" class="section section-alt" data-animate>
       <div class="container">
@@ -116,8 +246,10 @@
               <li>Intro to Machine Learning models</li>
               <li>1 Capstone Project</li>
             </ul>
-            <a href="#apply" onclick="selectProgram('3month')" class="btn btn-sm btn-ghost"
-              style="width: 100%; margin-top: 1.5rem;">Apply for 3 Months</a>
+            <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <a href="syllabus-3month.html" class="btn btn-sm btn-primary" style="width: 100%;">View Syllabus</a>
+              <a href="#apply" onclick="selectProgram('3month')" class="btn btn-sm btn-ghost" style="width: 100%;">Apply for 3 Months</a>
+            </div>
           </article>
 
           <!-- 6 Month -->
@@ -133,8 +265,10 @@
               <li>Model Deployment (Docker/FastAPI)</li>
               <li>2 Real-world Projects</li>
             </ul>
-            <a href="#apply" onclick="selectProgram('6month')" class="btn btn-sm btn-primary"
-              style="width: 100%; margin-top: 1.5rem;">Apply for 6 Months</a>
+            <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <a href="syllabus-6month.html" class="btn btn-sm btn-primary" style="width: 100%;">View Syllabus</a>
+              <a href="#apply" onclick="selectProgram('6month')" class="btn btn-sm btn-ghost" style="width: 100%;">Apply for 6 Months</a>
+            </div>
           </article>
 
           <!-- 1 Year -->
@@ -149,8 +283,10 @@
               <li>Client-facing consulting experience</li>
               <li>End-to-end Generative AI Capstone</li>
             </ul>
-            <a href="#apply" onclick="selectProgram('1year')" class="btn btn-sm btn-ghost"
-              style="width: 100%; margin-top: 1.5rem;">Apply for 1 Year</a>
+            <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <a href="syllabus-1year.html" class="btn btn-sm btn-primary" style="width: 100%;">View Syllabus</a>
+              <a href="#apply" onclick="selectProgram('1year')" class="btn btn-sm btn-ghost" style="width: 100%;">Apply for 1 Year</a>
+            </div>
           </article>
         </div>
       </div>

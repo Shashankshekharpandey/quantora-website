@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <title>6-Month Internship Syllabus – Quantora Analytics</title>
+  <meta name="description"
+    content="Detailed syllabus for the 6-Month AI & MLOps Internship at Quantora Analytics. Deep Dive into LLMs, LangGraph, and Production Engineering." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    /* Syllabus Specific Styles */
+    .syllabus-hero {
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      text-align: center;
+    }
+    
+    .syllabus-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .module-card {
+      background: radial-gradient(circle at top left, rgba(30, 64, 175, 0.2), rgba(15, 23, 42, 0.6));
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      margin-bottom: 2rem;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+
+    .module-card:hover {
+      border-color: rgba(59, 130, 246, 0.4);
+    }
+
+    .module-header {
+      padding: 1.5rem 2rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(15, 23, 42, 0.4);
+      border-bottom: 1px solid transparent;
+      transition: background 0.2s ease;
+    }
+
+    .module-header:hover {
+      background: rgba(15, 23, 42, 0.8);
+    }
+    
+    .module-header.active {
+      border-bottom-color: var(--border-subtle);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .module-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      font-family: "Space Grotesk", sans-serif;
+      color: var(--text-main);
+      margin: 0;
+    }
+
+    .module-toggle {
+      width: 24px;
+      height: 24px;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .module-toggle::before,
+    .module-toggle::after {
+      content: '';
+      position: absolute;
+      background: var(--accent);
+      border-radius: 2px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .module-toggle::before {
+      width: 14px;
+      height: 2px;
+    }
+
+    .module-toggle::after {
+      width: 2px;
+      height: 14px;
+      transition: height 0.3s ease;
+    }
+
+    .module-header.active .module-toggle {
+      transform: rotate(180deg);
+    }
+
+    .module-header.active .module-toggle::after {
+      height: 0;
+    }
+
+    .module-content {
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    }
+
+    .module-content.open {
+      max-height: 4000px; 
+      transition: max-height 0.8s ease-in-out;
+    }
+
+    .module-inner {
+      padding: 2rem;
+    }
+
+    .topic-block {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .topic-block:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .topic-title {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .topic-details {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .topic-details li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .topic-details li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      background: rgba(59, 130, 246, 0.1);
+      color: var(--accent);
+      border-radius: 4px;
+      font-size: 0.75rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Interview Section Styles */
+    .interview-category {
+      margin-bottom: 2rem;
+    }
+    .interview-category h4 {
+      color: var(--text-main);
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 0.75rem;
+    }
+    .question-list {
+        list-style: decimal;
+        padding-left: 1.2rem;
+        color: var(--text-muted);
+    }
+    .question-list li {
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="nav-logo-mark">Q</span>
+        <span class="nav-logo-text">Quantora<span class="nav-logo-faded"> Analytics</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../services/index.html" class="nav-link">Services</a></li>
+          <li><a href="../case-studies/index.html" class="nav-link">Case Studies</a></li>
+          <li><a href="../about/index.html" class="nav-link">About</a></li>
+          <li><a href="../consultancy/index.html" class="nav-link">Consultancy</a></li>
+          <li><a href="index.html" class="nav-link nav-link-active">Internship</a></li>
+          <li><a href="../contact/index.html" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="index.html#apply" class="btn btn-sm btn-primary nav-cta">Apply Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="syllabus-hero section-alt">
+      <div class="container narrow">
+        <p class="kicker">Internship Curriculum</p>
+        <h1>6-Month Deep Dive</h1>
+        <p class="section-intro" style="margin: 0 auto;">
+          Specialization and scale. Go from foundational ML to building autonomous agents and production-grade systems.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container syllabus-container">
+        
+        <!-- Phase 1 -->
+        <div class="module-card">
+          <div class="module-header" onclick="toggleModule(this)">
+            <div>
+                <span class="tag">Months 1-2</span>
+                <h3 class="module-title">Engineering Foundations & Backend</h3>
+            </div>
+            <div class="module-toggle"></div>
+          </div>
+          <div class="module-content">
+            <div class="module-inner">
+              <div class="topic-block">
+                <div class="topic-title">Advanced Engineering Stack</div>
+                <p>Before modeling, you need to master the environment.</p>
+                <ul class="topic-details">
+                    <li><strong>Software Engineering:</strong> Design Patterns, Clean Code, Git Workflows.</li>
+                    <li><strong>FastAPI Mastery:</strong> Asynchronous endpoints, Pydantic validation, Dependency Injection.</li>
+                    <li><strong>Containerization:</strong> Docker, Docker Compose, Multi-stage builds.</li>
+                    <li><strong>Database Design:</strong> SQL (PostgreSQL) vs NoSQL (MongoDB/Vector DBs).</li>
+                </ul>
+              </div>
+              
+              <div class="topic-block">
+                  <div class="topic-title">Project 1: Scalable Data API</div>
+                  <p class="small-muted">Build a high-performance REST API that ingests real-time data, processes it asynchronously using Celery/Redis, and stores it. Full Docker deployment required.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="module-card">
+            <div class="module-header" onclick="toggleModule(this)">
+              <div>
+                  <span class="tag">Months 3-4</span>
+                  <h3 class="module-title">Deep Learning & Computer Vision</h3>
+              </div>
+              <div class="module-toggle"></div>
+            </div>
+            <div class="module-content">
+              <div class="module-inner">
+                <div class="topic-block">
+                  <div class="topic-title">Neural Architectures</div>
+                  <p>Understanding the backbone of modern AI.</p>
+                  <ul class="topic-details">
+                      <li><strong>PyTorch Deep Dive:</strong> Custom Datasets, Training Loops, Auto-grad.</li>
+                      <li><strong>Computer Vision:</strong> CNNs, Transfer Learning, Object Detection (YOLOv8).</li>
+                      <li><strong>Image Segmentation:</strong> U-Net architecture, Medical Image Analysis.</li>
+                  </ul>
+                </div>
+                
+                <div class="topic-block">
+                    <div class="topic-title">Project 2: Real-time Object Detection Service</div>
+                    <p class="small-muted">Create a video analytics pipeline that detects PPE (Personal Protective Equipment) on construction workers in real-time. Serve the model using FastAPI and WebSockets.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Phase 3 -->
+        <div class="module-card">
+            <div class="module-header" onclick="toggleModule(this)">
+              <div>
+                  <span class="tag">Months 5-6</span>
+                  <h3 class="module-title">Generative AI & Agentic Workflows</h3>
+              </div>
+              <div class="module-toggle"></div>
+            </div>
+            <div class="module-content">
+              <div class="module-inner">
+                <div class="topic-block">
+                  <div class="topic-title">LLMs & Agents</div>
+                  <p>Building systems that think and act.</p>
+                  <ul class="topic-details">
+                      <li><strong>Advanced Prompt Engineering:</strong> Chain-of-Thought, Tree-of-Thought, ReAct.</li>
+                      <li><strong>LangChain & LangGraph:</strong> Building stateful agents, Cyclic graphs, Human-in-the-loop.</li>
+                      <li><strong>Multi-Agent Systems:</strong> Orchestrating multiple agents to solve complex tasks.</li>
+                      <li><strong>Vector Search:</strong> Hybrid search (Sparse + Dense) with Pinecone/Weaviate.</li>
+                  </ul>
+                </div>
+  
+                <div class="topic-block">
+                    <div class="topic-title">🏆 Capstone: "Autonomous Customer Support Agent"</div>
+                    <p class="small-muted">Build a production-grade Customer Support Chatbot using <strong>LangGraph</strong> and <strong>FastAPI</strong>.</p>
+                    <ul class="topic-details" style="margin-top: 0.5rem;">
+                        <li><strong>Features:</strong> Intent classification, RAG for policy lookup, Action execution (processing refunds via API).</li>
+                        <li><strong>Architecture:</strong> Stateful graph with memory, handling interruptions and confirmations.</li>
+                        <li><strong>Deployment:</strong> Deployed on Cloud (AWS/Azure) with tracing via LangSmith/Arize.</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Interview Prep Module -->
+        <div class="module-card">
+          <div class="module-header" onclick="toggleModule(this)">
+            <div>
+                <span class="tag">Bonus</span>
+                <h3 class="module-title">Interview Preparation Kit (50 Questions)</h3>
+            </div>
+            <div class="module-toggle"></div>
+          </div>
+          <div class="module-content">
+            <div class="module-inner">
+              <p style="margin-bottom: 2rem;">Comprehensive prep for Engineering and Data Science roles.</p>
+              
+              <div class="interview-category">
+                <h4>🐍 Python & System Design (10)</h4>
+                <ol class="question-list">
+                    <li>Explain the GIL and how to achieve true parallelism in Python.</li>
+                    <li>How does Python's garbage collection work (Reference counting vs Generational)?</li>
+                    <li>Design a URL shortening service (System Design).</li>
+                    <li>How would you handle 1TB of data in a Pandas workflow? (Dask/Spark/Chunking).</li>
+                    <li>What is the difference between concurrency and parallelism?</li>
+                    <li>Explain Dependency Injection in FastAPI.</li>
+                    <li>How do REST and GraphQL differ? When to use which?</li>
+                    <li>What is a Decorator? Implementation of a retry decorator.</li>
+                    <li>Explain Asynchronous programming (async/await) in Python.</li>
+                    <li>How do you secure an API? (JWT, OAuth2, Rate Limiting).</li>
+                </ol>
+              </div>
+
+              <div class="interview-category">
+                <h4>🤖 Machine Learning & MLOps (20)</h4>
+                <ol class="question-list">
+                    <li>What is Model Drift (Data vs Concept drift)? How do you detect it?</li>
+                    <li>Explain the difference between Batch Serving and Online Serving.</li>
+                    <li>How does XGBoost differ from Random Forest under the hood?</li>
+                    <li>Explain the trade-off between Precision and Recall.</li>
+                    <li>What is A/B testing in the context of ML models?</li>
+                    <li>How do you handle missing data in production pipelines?</li>
+                    <li>Explain Quantization and Pruning for model optimization.</li>
+                    <li>What is Shadow Deployment?</li>
+                    <li>How does Docker help in ML reproducibility?</li>
+                    <li>Explain the architecture of a Transformer model.</li>
+                    <li>What is the attention mechanism mathematically?</li>
+                    <li>Difference between L1 and L2 regularization.</li>
+                    <li>How do you handle imbalanced classes (SMOTE, Focal Loss)?</li>
+                    <li>What is a Feature Store? Why do we need it?</li>
+                    <li>Explain Gradient Descent and its variants (Adam, RMSprop).</li>
+                    <li>What is Transfer Learning?</li>
+                    <li>How do embeddings work?</li>
+                    <li>Explain ROC-AUC curve.</li>
+                    <li>What is K-Fold Cross Validation?</li>
+                    <li>How to debug an overfitting neural network?</li>
+                </ol>
+              </div>
+              
+              <div class="interview-category">
+                <h4>🧠 GenAI & LLMs (20)</h4>
+                <ol class="question-list">
+                    <li>What is RAG (Retrieval Augmented Generation)?</li>
+                    <li>Explain the difference between Encoder-only (BERT) and Decoder-only (GPT) models.</li>
+                    <li>What is the Context Window? How do we handle long contexts?</li>
+                    <li>Explain Temperature and Top-P sampling.</li>
+                    <li>What is LangChain? How does it work?</li>
+                    <li>What are Hallucinations? How do we reduce them?</li>
+                    <li>Explain ReAct prompting technique.</li>
+                    <li>What is Fine-tuning (LoRA/QLoRA)?</li>
+                    <li>How do Vector Databases work? (HNSW, Cosine Similarity).</li>
+                    <li>What is LangGraph? Difference from standard chains.</li>
+                    <li>How do you evaluate an LLM application? (RAGAS).</li>
+                    <li>What are Agents? How do they differ from Chains?</li>
+                    <li>Explain Tokenization. Byte-Pair Encoding (BPE).</li>
+                    <li>What is Grounding in LLMs?</li>
+                    <li>How to handle PII (Personally Identifiable Information) in prompts?</li>
+                    <li>What is Function Calling in OpenAI models?</li>
+                    <li>Explain the Vanishing Gradient problem.</li>
+                    <li>What is Zero-shot vs Few-shot learning?</li>
+                    <li>Challenges of deploying LLMs in production (Latency, Cost).</li>
+                    <li>Future of LLMs: What is Mixture of Experts (MoE)?</li>
+                </ol>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="index.html#apply" class="btn btn-primary">Apply for this Program</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="nav-logo-mark">Q</span>
+        <span class="footer-logo-text">Quantora Analytics</span>
+        <p class="footer-tagline">Data science, machine learning, and AI for modern teams.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <p class="footer-heading">Company</p>
+          <a href="../about/index.html">About</a>
+          <a href="../case-studies/index.html">Case Studies</a>
+          <a href="../services/index.html">Services</a>
+          <a href="../consultancy/index.html">Consultancy</a>
+          <a href="index.html">Internship</a>
+        </div>
+        <div>
+          <p class="footer-heading">Expertise</p>
+          <span>Generative AI &amp; LLMs</span>
+          <span>Computer Vision</span>
+          <span>MLOps &amp; Engineering</span>
+          <span>Data Strategy &amp; BI</span>
+        </div>
+        <div>
+          <p class="footer-heading">Get in touch</p>
+          <a href="../contact/index.html">Contact</a>
+          <span>shashank.datawiz808@gmail.com</span>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© <span id="footer-year"></span> Quantora Analytics. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script>
+    // Accordion Logic
+    function toggleModule(header) {
+      const content = header.nextElementSibling;
+      const isOpen = content.classList.contains('open');
+      
+      // Close all others
+      document.querySelectorAll('.module-content').forEach(c => {
+        c.classList.remove('open');
+        c.previousElementSibling.classList.remove('active');
+      });
+
+      if (!isOpen) {
+        content.classList.add('open');
+        header.classList.add('active');
+      }
+    }
+
+    // Auto-open first module
+    document.addEventListener('DOMContentLoaded', () => {
+        const firstHeader = document.querySelector('.module-header');
+        if(firstHeader) toggleModule(firstHeader);
+    });
+  </script>
+</body>
+
+</html>
+
