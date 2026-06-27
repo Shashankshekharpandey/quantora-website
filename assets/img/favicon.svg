@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="grad" cx="30%" cy="0%" r="100%">
+      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
+      <stop offset="48%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="64" height="64" rx="20" fill="url(#grad)" />
+  <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="sans-serif" font-weight="bold" font-size="40" dy=".1em">Q</text>
+</svg>

@@ -1,0 +1,21 @@
+{
+  "name": "Quantora Analytics",
+  "short_name": "Quantora",
+  "description": "Enterprise AI Consulting — Generative AI, Voice AI, RAG, MLOps",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050814",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "technology"],
+  "lang": "en-IN",
+  "dir": "ltr"
+}

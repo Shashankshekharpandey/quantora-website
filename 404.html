@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <title>404 – Page Not Found | Quantora Analytics</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Return to Quantora Analytics home." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="./" class="nav-logo" aria-label="Quantora Analytics Home">
+        <span class="nav-logo-mark" aria-hidden="true">Q</span>
+        <span class="nav-logo-text">Quantora<span class="nav-logo-faded"> Analytics</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="./" class="nav-link">Home</a></li>
+          <li><a href="services/" class="nav-link">Services</a></li>
+          <li><a href="contact/" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="contact/" class="btn btn-sm btn-primary nav-cta">Book Consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container page-404">
+      <div class="page-404-code" aria-hidden="true">404</div>
+      <h1>Page not found.</h1>
+      <p>The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+        <a href="./" class="btn btn-primary btn-lg">Back to Home</a>
+        <a href="contact/" class="btn btn-ghost btn-lg">Contact Us</a>
+      </div>
+
+      <div style="margin-top:3rem;text-align:left;max-width:560px;width:100%;">
+        <p style="font-size:0.85rem;color:var(--text-soft);text-align:center;margin-bottom:1.25rem;">Or explore these pages:</p>
+        <div class="grid grid-3" style="gap:0.75rem;">
+          <a href="services/" class="card card-compact" style="text-align:center;font-size:0.85rem;color:var(--text-muted);">Services</a>
+          <a href="case-studies/" class="card card-compact" style="text-align:center;font-size:0.85rem;color:var(--text-muted);">Case Studies</a>
+          <a href="blog/" class="card card-compact" style="text-align:center;font-size:0.85rem;color:var(--text-muted);">Blog</a>
+          <a href="about/" class="card card-compact" style="text-align:center;font-size:0.85rem;color:var(--text-muted);">About</a>
+          <a href="internship/" class="card card-compact" style="text-align:center;font-size:0.85rem;color:var(--text-muted);">Internship</a>
+          <a href="contact/" class="card card-compact" style="text-align:center;font-size:0.85rem;color:var(--text-muted);">Contact</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-bottom" style="border-top:1px solid rgba(148,163,184,0.15);padding-top:1.5rem;">
+      <span>© <span id="footer-year"></span> Quantora Analytics. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
